@@ -1,0 +1,11 @@
+{
+    "dependencies": [
+      "eigen3",
+      "ceres",
+      "glog",
+      "pcl",
+      {"name": "opencv", "features": ["tbb"]},
+      "matplotplusplus",
+      "tbb"
+    ]
+}
