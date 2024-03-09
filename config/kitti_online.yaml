@@ -1,0 +1,85 @@
+%YAML 1.2
+
+dataset_path: "D:\\Datasets\\KITTI\\05"
+
+glog_to_stderr: 1 # 1: log to stderr 0: not
+
+glog_directory: "D:/log/"
+
+data_dump_path: "D:\\PhotometricCalibration\\"
+
+# Use [start_frame_idx, start_frame_idx + frame_num)
+start_frame_idx: 0
+frame_num: 800
+
+extri_error.enable: 0 # if apply error
+extri_error.rot.x: -0.32759 # Degree
+extri_error.rot.y: -1.53476 # Degree
+extri_error.rot.z: 1.37509 # Degree
+extri_error.trans.x: 0.00210 # Meter
+extri_error.trans.y: 0.17044 # Meter
+extri_error.trans.z: 0.007378 # Meter
+
+# --------- Error Detector settings -----------
+
+# Euclidean distance, in meter
+detector.ptcloud_clip.min: 5.0
+detector.ptcloud_clip.max: 80.0
+
+detector.sample_ratio: 0.02
+
+detector.err_tolr_x: 0.05
+detector.err_tolr_y: 0.05
+detector.trans_thresh_ratio: 0.5
+
+detector.obs_thresh: 2
+
+# Data window size
+detector.window_size: 10
+
+# Which pyramid level to perform detection
+detector.pyramid_lvl: 0
+
+# How many extri to sample around
+detector.extri_sample_num: 200
+
+detector.covis_check.max_view_range: 50.0
+detector.covis_check.score_thresh: 0.98
+detector.covis_check.edge_discard: 5
+
+detector.pixel_val_lower_lim: 2.0
+detector.pixel_val_upper_lim: 253.0
+
+# --------- Calibrator settings -----------
+
+# Euclidean distance, in meter
+calibrator.ptcloud_clip.min: 5.0
+calibrator.ptcloud_clip.max: 80.0
+
+calibrator.sample_ratio: 0.02
+
+calibrator.err_tolr_x: 0.05
+calibrator.err_tolr_y: 0.05
+calibrator.trans_thresh_ratio: 0.5
+
+calibrator.obs_thresh: 3 #2
+
+# Data window size
+calibrator.window_size: 10
+
+calibrator.covis_check.max_view_range: 50.0
+calibrator.covis_check.score_thresh: 0.98
+calibrator.covis_check.edge_discard: 5
+
+# Optimizer setting
+calibrator.optimize.start_frame_num: 800
+calibrator.optimize.pyramid_lvl: 3
+calibrator.optimize.max_iter: 200
+calibrator.optimize.residual_reserve_percent: 0.90
+
+calibrator.pixel_val_lower_lim: 2.0
+calibrator.pixel_val_upper_lim: 253.0
+
+# 0 for manual cost
+# 1 for optimization
+calibrator.computation_mode: 1

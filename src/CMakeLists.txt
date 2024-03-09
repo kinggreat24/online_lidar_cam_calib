@@ -1,5 +1,4 @@
 add_library(photo_cali STATIC
-	PhotoCali.cc
     CovisGraph.cc 
 	BASolver.cc 
 	Optimizer.cc 
@@ -7,7 +6,6 @@ add_library(photo_cali STATIC
 	ImgPyramid.cc
 	PhotoCaliOnline.cc
 	CovisDataPool.cc 
-	PhotoCaliExRange.cc 
 	ManualPhotoErr.cc 
 	CaliErrDetector.cc 
 	Misc.cc)

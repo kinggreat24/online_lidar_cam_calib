@@ -17,7 +17,7 @@ void LoadConfig(phc::ErrDetectorConf& conf);
 
 int main(int argc, char const* argv[]) {
     if (argc != 2) {
-        std::cerr << "usage: ./kitti_loader <path-to-config-file>" << std::endl;
+        std::cerr << "usage: ./err_detection <path-to-config-file>" << std::endl;
         return EXIT_FAILURE;
     }
 

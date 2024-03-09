@@ -82,9 +82,9 @@ KittiLoader::KittiLoader(const string &data_root, bool &if_success) : root_(data
 
 Frame KittiLoader::operator[](size_t i) const{
     using boost::format;
-    // format fmt_lidar("%s/%06d.bin");
+    format fmt_lidar("%s/%06d.bin");
     // format fmt_lidar("%s/%06d.txt");
-    format fmt_lidar("%s/%06d.pcd");
+    // format fmt_lidar("%s/%06d.pcd");
     format fmt_img("%s/%06d.png");
 
     string ptcloud = (fmt_lidar % lidar_path_.string() % i).str();
@@ -92,9 +92,9 @@ Frame KittiLoader::operator[](size_t i) const{
     string right_img = (fmt_img % right_img_path_.string() % i).str();
 
     Frame f;
-    // f.ptcloud = LoadPtCloud(ptcloud);
+    f.ptcloud = LoadPtCloud(ptcloud);
     // f.ptcloud = LoadPtCloudTxt(ptcloud);
-    f.ptcloud = LoadPtCloudPcd(ptcloud);
+    // f.ptcloud = LoadPtCloudPcd(ptcloud);
     f.left_img = cv::imread(left_img, cv::IMREAD_GRAYSCALE);
     f.right_img = cv::imread(right_img, cv::IMREAD_GRAYSCALE);
 

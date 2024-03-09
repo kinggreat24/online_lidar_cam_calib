@@ -21,7 +21,7 @@ namespace {
 
 int main(int argc, char const* argv[]) {
     if (argc != 2) {
-        std::cerr << "usage: ./kitti_loader <path-to-config-file>" << std::endl;
+        std::cerr << "usage: ./auto_cali_online <path-to-config-file>" << std::endl;
         return EXIT_FAILURE;
     }
 
