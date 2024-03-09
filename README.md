@@ -4,7 +4,7 @@ Repo for paper Online Calibration Between Camera and LiDAR with Spatial-Temporal
 ## Setup
 
 ```bash
-git submodule update --recursive
+git submodule update --init --recursive
 ./vcpkg/bootstrap-vcpkg.sh 
 ./vcpkg/vcpkg install
 ```
